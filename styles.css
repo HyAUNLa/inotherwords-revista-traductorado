@@ -317,7 +317,20 @@ main h4 {
   margin-bottom: 24px;
 }
 
-.tab {
+.content h5 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #563447;
+  margin-bottom: 8px;
+}
+.content h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #563447;
+  margin-bottom: 24px;
+}
+.tab,
+.tab-index {
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   font-size: small;
@@ -334,7 +347,6 @@ main h4 {
 }
 
 .tab.active {
-  /* border-bottom: 2px solid #563447; */
   color: white;
   background-color: #563447;
 }
@@ -343,7 +355,7 @@ main h4 {
   margin-top: 48px;
   display: flex;
   gap: 12px;
-  /* border-top: 5px solid #563447; */
+  flex-wrap: wrap;
   border-bottom: 4px solid #563447;
 }
 
@@ -387,6 +399,58 @@ main h4 {
 
 .content-paragraph {
   max-width: 500px;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: #563447;
+  margin-bottom: 36px;
+}
+
+.prev-editions {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.prev-ed-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.prev-ed-card img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+}
+.prev-ed-card a {
+  width: 200px;
+  background-color: #563447;
+  color: white;
+  padding: 12px;
+  margin-top: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.indice {
+  color: #563447;
+}
+
+.indice li {
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.indice h6 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1024px) {
