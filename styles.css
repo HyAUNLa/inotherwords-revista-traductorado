@@ -1,3 +1,16 @@
+:root {
+  --color-primary: #1a487c;
+  --color-primary-light: #65809b;
+  --color-secondary: #1bae7c;
+  --color-secondary-light: #93c3b3;
+  --color-light: #faf7f2;
+  --color-dark: #001514;
+  --color-xx-dark: #00080c;
+  --regular-font-size: 1rem;
+  --font-reading: "Lato", sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
 *,
 *::before,
 *::after {
@@ -71,8 +84,8 @@ nav {
 }
 
 nav > div:first-child {
-  background: black;
-  color: white;
+  background: var(--color-dark);
+  color: var(--color-light);
   display: flex;
   align-items: center;
   padding: 12px 24px;
@@ -81,8 +94,8 @@ nav > div:first-child {
 }
 
 nav > div:last-child {
-  background: white;
-  color: black;
+  background: var(--color-light);
+  color: var(--color-primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 24px;
   display: flex;
@@ -104,7 +117,7 @@ nav img {
 
 #menu a:hover,
 #menu .selected-menu-item {
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid var(--color-secondary);
 }
 
 nav ul {
@@ -126,7 +139,7 @@ nav ul {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  background: #1a0d2e;
+  background: var(--color-dark);
 }
 
 .duotone img {
@@ -144,13 +157,13 @@ nav ul {
 }
 
 .duotone::before {
-  background: #471d8b;
+  background: var(--color-secondary);
   mix-blend-mode: screen;
   opacity: 0.7;
 }
 
 .duotone::after {
-  background: #5a2d46;
+  background: var(--color-primary);
   mix-blend-mode: multiply;
   opacity: 0.9;
 }
@@ -161,6 +174,7 @@ nav ul {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .home .duotone {
@@ -173,18 +187,11 @@ nav ul {
 }
 
 .home .title {
-  /* width: 900px; */
-  color: white;
-  /* display: flex; */
+  color: var(--color-light);
   margin-top: 250px;
   position: relative;
   z-index: 1;
-  /* gap: 48px; */
 }
-
-/* .home .title > * {
-  flex: 1;
-} */
 
 .home .title .description {
   display: flex;
@@ -207,7 +214,6 @@ nav ul {
 }
 
 .home h3 {
-  /* padding-top: 50px; */
   max-width: 500px;
   font-weight: 900;
   margin-bottom: 20px;
@@ -216,7 +222,7 @@ nav ul {
 .home .title p {
   max-width: 500px;
   font-size: medium;
-  background-color: #563447;
+  background-color: var(--color-primary);
   padding: 12px;
 }
 .home .title p span,
@@ -226,8 +232,8 @@ main div p span {
 }
 
 footer {
-  background: black;
-  color: white;
+  background: var(--color-dark);
+  color: var(--color-light);
   padding: 2.5rem 1rem;
 }
 
@@ -236,7 +242,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #d6b3ff;
+  color: var(--color-secondary-light);
 }
 
 .footer-top,
@@ -286,14 +292,15 @@ footer a:hover {
 main {
   padding: 200px 0;
   min-height: 100vh;
-  background-color: #563447;
+  background-color: var(--color-primary);
   display: flex;
   justify-content: center;
 }
 
 main > div {
   width: 900px;
-  background-color: #faf7f2;
+  background-color: var(--color-light);
+  color: var(--color-primary);
   padding: 100px;
   border-radius: 30px;
 }
@@ -301,32 +308,32 @@ main > div {
 main div h2 {
   font-family: "Playfair Display", serif;
   font-size: 60px;
-  color: #563447;
+  color: var(--color-primary);
 }
 
 main div h5 {
   max-width: 400px;
-  color: #563447;
+  color: var(--color-primary);
   margin-bottom: 12px;
 }
 
 main h4 {
   font-family: "Playfair Display", serif;
   font-size: 36px;
-  color: #563447;
+  color: var(--color-primary);
   margin-bottom: 24px;
 }
 
 .content h5 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
-  color: #563447;
+  color: var(--color-primary);
   margin-bottom: 8px;
 }
 .content h6 {
   font-size: 16px;
   text-transform: uppercase;
-  color: #563447;
+  color: var(--color-primary);
   margin-bottom: 24px;
 }
 .tab,
@@ -337,18 +344,17 @@ main h4 {
   font-weight: 600;
   padding: 8px;
   border-radius: 8px 8px 0 0;
-  color: #563447;
+  color: var(--color-xx-dark);
   transition: all 0.2s;
 }
 
 .tab:hover {
-  background-color: #8c6c7e;
-  color: white;
+  background-color: var(--color-secondary-light);
 }
 
 .tab.active {
-  color: white;
-  background-color: #563447;
+  color: var(--color-xx-dark);
+  background-color: var(--color-secondary);
 }
 
 .tabs {
@@ -356,7 +362,7 @@ main h4 {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  border-bottom: 4px solid #563447;
+  border-bottom: 4px solid var(--color-secondary);
 }
 
 .team {
@@ -367,7 +373,7 @@ main h4 {
 
 .team-card {
   max-width: 250px;
-  border: 2px solid #563447;
+  border: 2px solid var(--color-primary);
   padding: 12px;
   border-radius: 4px;
   flex: 1;
@@ -404,7 +410,7 @@ main h4 {
 hr {
   border: none;
   height: 3px;
-  background: #563447;
+  background: var(--color-primary);
   margin-bottom: 36px;
 }
 
@@ -427,8 +433,8 @@ hr {
 }
 .prev-ed-card a {
   width: 200px;
-  background-color: #563447;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   padding: 12px;
   margin-top: 12px;
   text-transform: uppercase;
@@ -437,7 +443,7 @@ hr {
 }
 
 .indice {
-  color: #563447;
+  color: var(--color-primary);
 }
 
 .indice li {
