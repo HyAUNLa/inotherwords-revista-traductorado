@@ -459,6 +459,23 @@ hr {
   margin-bottom: 16px;
 }
 
+.article-preview {
+  border-bottom: 1px solid var(--color-secondary);
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.article-preview .preview-type {
+  text-transform: uppercase;
+}
+
+.article-preview .preview-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1024px) {
   .footer-top,
   .footer-bottom {

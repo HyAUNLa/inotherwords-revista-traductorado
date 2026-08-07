@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Complicidad y silencio: las lavanderías de las Magdalenas</title>
+    <meta
+      name="description"
+      content="Artículo de Daniela Saccone sobre las lavanderías de las Magdalenas."
+    />
+
+    <style>
+      :root {
+        --detalle: #325862;
+        --onyx: #353839;
+        --card-bg: #f4fbfd;
+        --card-bg-2: #ffffff;
+        --muted: #657174;
+        --line: rgba(50, 88, 98, 0.26);
+        --soft-line: rgba(50, 88, 98, 0.14);
+        --shadow: rgba(30, 50, 56, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          #eef8fb 0%,
+          #ffffff 42%,
+          #edf7fa 100%
+        );
+        color: var(--onyx);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.68;
+      }
+
+      .article-page {
+        width: 100%;
+        padding: 48px 18px;
+      }
+
+      .article-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .article-card {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.9),
+            rgba(244, 251, 253, 0.98)
+          ),
+          var(--card-bg);
+        border: 1px solid var(--line);
+        box-shadow: 0 22px 60px var(--shadow);
+        padding: clamp(28px, 5vw, 64px);
+      }
+
+      .article-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 9px;
+        background: var(--detalle);
+      }
+
+      .article-kicker {
+        margin: 0 0 18px;
+        color: var(--detalle);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .article-title {
+        max-width: 820px;
+        margin: 0;
+        color: var(--onyx);
+        font-size: clamp(1rem, 2.5vw, 2.2rem);
+        line-height: 0.98;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .article-author {
+        margin: 22px 0 0;
+        color: var(--detalle);
+        font-size: clamp(1rem, 2vw, 1.24rem);
+        font-weight: 700;
+      }
+
+      .article-divider {
+        width: 100%;
+        height: 1px;
+        margin: 34px 0;
+        background: linear-gradient(
+          90deg,
+          var(--detalle),
+          var(--line),
+          transparent
+        );
+      }
+
+      .article-intro {
+        margin: 0;
+        max-width: 790px;
+        color: var(--onyx);
+        font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+        line-height: 1.75;
+      }
+
+      .article-index {
+        margin: 38px 0;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--soft-line);
+        border-left: 5px solid var(--detalle);
+      }
+
+      .article-index h2 {
+        margin: 0 0 14px;
+        color: var(--detalle);
+        font-size: 0.86rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .article-index ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .article-index a {
+        color: var(--onyx);
+        font-size: 0.98rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .article-index a::before {
+        content: "—";
+        color: var(--detalle);
+        margin-right: 8px;
+      }
+
+      .article-index a:hover {
+        color: var(--detalle);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .article-content {
+        display: grid;
+        gap: 34px;
+      }
+
+      .article-section {
+        scroll-margin-top: 28px;
+      }
+
+      .article-section h2 {
+        margin: 0 0 16px;
+        padding-bottom: 10px;
+        color: var(--detalle);
+        border-bottom: 1px solid var(--line);
+        font-size: clamp(1.22rem, 2vw, 1.6rem);
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .article-section p {
+        margin: 0 0 18px;
+        color: var(--onyx);
+        font-size: 1.02rem;
+      }
+
+      .article-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .quote-box {
+        margin: 28px 0;
+        padding: 24px;
+        background: rgba(50, 88, 98, 0.07);
+        border-left: 5px solid var(--detalle);
+        color: var(--onyx);
+        font-size: 1.05rem;
+        font-style: italic;
+        line-height: 1.75;
+      }
+
+      .bio-box {
+        margin-top: 44px;
+        padding: 28px;
+        background: var(--card-bg-2);
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--detalle);
+      }
+
+      .bio-box h2 {
+        margin: 0 0 14px;
+        color: var(--detalle);
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .bio-box p {
+        margin: 0;
+        color: var(--onyx);
+        font-size: 1rem;
+      }
+
+      .article-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .article-button {
+        appearance: none;
+        border: 1px solid var(--detalle);
+        background: var(--detalle);
+        color: #ffffff;
+        cursor: pointer;
+        padding: 12px 18px;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          background 160ms ease,
+          color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .article-button:hover {
+        background: transparent;
+        color: var(--detalle);
+        transform: translateY(-1px);
+      }
+
+      .bio-content {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .author-photo {
+        width: 160px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border: 4px solid var(--detalle);
+        background: #ffffff;
+        box-shadow: 0 10px 26px rgba(50, 88, 98, 0.18);
+      }
+
+      @media (max-width: 640px) {
+        .bio-content {
+          grid-template-columns: 1fr;
+        }
+
+        .author-photo {
+          width: 140px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .article-page {
+          padding: 22px 12px;
+        }
+
+        .article-card {
+          padding: 30px 20px;
+        }
+
+        .article-index {
+          padding: 18px;
+        }
+
+        .article-actions {
+          justify-content: stretch;
+        }
+
+        .article-button {
+          width: 100%;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .article-page {
+          padding: 0;
+        }
+
+        .article-card {
+          box-shadow: none;
+          border: none;
+        }
+
+        .article-actions {
+          display: none;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="article-page">
+      <div class="article-container">
+        <article class="article-card">
+          <p class="article-kicker">Artículo</p>
+
+          <h1 class="article-title">
+            Complicidad y silencio: las lavanderías de las Magdalenas
+          </h1>
+
+          <p class="article-author">Trad. Públ. Daniela Saccone</p>
+
+          <div class="article-divider"></div>
+
+          <p class="article-intro">
+            A fines de 2024 se estrenó <em>Cosas pequeñas como esas</em>,
+            dirigida por el belga Tim Mielants. Protagonizada por Cillian
+            Murphy, es la adaptación de una breve, pero muy potente novela de la
+            escritora irlandesa Claire Keegan.
+          </p>
+
+          <nav class="article-index" aria-label="Índice del artículo">
+            <h2>Índice</h2>
+            <ul>
+              <li>
+                <a href="#novela-pelicula"
+                  >La novela, la película y el silencio</a
+                >
+              </li>
+              <li>
+                <a href="#instituciones">Las instituciones de las Magdalenas</a>
+              </li>
+              <li><a href="#condiciones">Condiciones de vida y castigos</a></li>
+              <li><a href="#estado">Complicidad del Estado y la Iglesia</a></li>
+              <li><a href="#memoria">Memoria, duelo y reparación</a></li>
+              <li><a href="#bio">Sobre la autora</a></li>
+            </ul>
+          </nav>
+
+          <div class="article-content">
+            <section id="novela-pelicula" class="article-section">
+              <h2>La novela, la película y el silencio</h2>
+
+              <p>
+                En solamente 96 páginas, Keegan cuenta la historia de Bill
+                Furlong, un hombre que vende carbón y madera, padre de cinco
+                hijas, que vive en un pueblo del interior de Irlanda en el año
+                1985.
+              </p>
+
+              <p>
+                En uno de sus repartos habituales al convento local, Furlong se
+                encuentra con una mujer muy joven, casi adolescente,
+                desesperada, que lo coloca no solo en la encrucijada de ayudarla
+                o no, sino que también lo enfrenta a sus propios demonios del
+                pasado.
+              </p>
+
+              <p>
+                Aun cuando ni el libro ni la película describen explícitamente
+                qué es lo que sucede en ese convento, solo se menciona que es
+                una lavandería de las Magdalenas. Sin embargo, es evidente para
+                el personaje de Furlong que involucrarse en tal situación podría
+                destruirle la vida. Y es que lo que ocurría en ese convento, y
+                como en tantos otros, era siniestro.
+              </p>
+            </section>
+
+            <section id="instituciones" class="article-section">
+              <h2>Las instituciones de las Magdalenas</h2>
+
+              <p>
+                Desde la fundación del Estado Libre Irlandés en 1922 y hasta
+                1996, unas 10.000 niñas y mujeres fueron encarceladas, obligadas
+                a realizar trabajos no remunerados y sometidas a graves
+                maltratos físicos y psicológicos en las instituciones de las
+                Magdalenas de Irlanda.
+              </p>
+
+              <p>
+                Estas instituciones, mayormente lavanderías y talleres de
+                costura con fines de lucro, fueron carcelarias y punitivas.
+                Estaban distribuidas en todo el país y eran dirigidas por monjas
+                de cuatro órdenes religiosas: las Hermanas de la Misericordia,
+                las Hermanas de Nuestra Señora de la Caridad, las Hermanas de la
+                Caridad y las Hermanas del Buen Pastor.
+              </p>
+
+              <p>
+                Entre las mujeres y niñas que fueron confinadas se encontraban
+                madres solteras, hijas de madres solteras, víctimas de abuso
+                sexual, prostitutas, mujeres consideradas promiscuas, “caídas”,
+                como solían llamarlas, o aquellas que eran simplemente
+                percibidas como una carga para sus familias o la Iglesia.
+              </p>
+            </section>
+
+            <section id="condiciones" class="article-section">
+              <h2>Condiciones de vida y castigos</h2>
+
+              <p>
+                Las condiciones de vida dentro de los conventos eran
+                infrahumanas. Cuando ingresaban, a menudo les cambiaban el
+                nombre por el de una santa y les daban un número de
+                identificación. Les cortaban el pelo y les quitaban su propia
+                ropa, que era reemplazada por un uniforme gris.
+              </p>
+
+              <p>
+                Tenían prohibido hablar de su lugar de origen y de su familia.
+                Se imponía la regla del silencio permanente y no tenían contacto
+                de ningún tipo con el exterior. Las mujeres y niñas eran
+                obligadas a lavar, planchar, empaquetar y coser ropa de la
+                mañana a la noche, sin recibir ningún tipo de retribución.
+              </p>
+
+              <p>
+                Los castigos por negarse a trabajar incluían el aislamiento, el
+                maltrato físico y verbal, la privación de alimento y abrigo, y
+                humillaciones como raparlas. Era común que murieran ahí. Las que
+                pudieron escapar, tal vez en la parte de atrás de una camioneta
+                que repartía carbón, eran capturadas y devueltas por la guardia
+                nacional. Y los castigos, atroces.
+              </p>
+
+              <p>
+                Si algunas tenían la fortuna de ser liberadas, estaban tan
+                severamente desconectadas y traumatizadas que no lograban
+                reinsertarse en la sociedad.
+              </p>
+            </section>
+
+            <section id="estado" class="article-section">
+              <h2>Complicidad del Estado y la Iglesia</h2>
+
+              <p>
+                El Estado nunca reguló el funcionamiento de las lavanderías de
+                las Magdalenas, a pesar de que las reconocía y avalaba como
+                lugares de detención y cuidado de niñas y mujeres y, aún más
+                grave, mantenía relaciones comerciales con ellas, tal como se
+                comprobó posteriormente.
+              </p>
+
+              <p>
+                Recién en 1993, y a partir de un escándalo que se desató de
+                manera inesperada cuando se exhumó una fosa común donde se
+                encontraron los restos de 155 mujeres ubicada en la propiedad de
+                uno de los conventos donde funcionaba una de las lavanderías más
+                extensas de Dublín, el secreto a voces fue revelado.
+              </p>
+
+              <p>
+                Sin embargo, no fue hasta el año 2011 que la agrupación
+                “Justicia para las Magdalenas” presentó un informe ante el
+                Comité de Torturas de las Naciones Unidas. En 2013, una comisión
+                liderada por el senador Martin McAleese investigó la denuncia y
+                comprobó que el Estado participó en el funcionamiento de las
+                lavanderías en complicidad con la Iglesia católica.
+              </p>
+
+              <p>
+                En 2014, el Estado Irlandés pidió disculpas formales a las
+                sobrevivientes y sus familiares y, a partir de 2022, otorgó
+                indemnizaciones.
+              </p>
+            </section>
+
+            <section id="memoria" class="article-section">
+              <h2>Memoria, duelo y reparación</h2>
+
+              <div class="quote-box">
+                Dice la escritora Mariana Enríquez a propósito de la novela y de
+                la película: “Hay algo deliberado en el silencio de
+                <em>Cosas pequeñas como esas</em> que da en el corazón del
+                duelo, la complicidad y el terror de tantos años (...). La
+                información es esencial para restablecer identidades, dar una
+                dimensión del desastre y gritar la violencia que sufrieron las
+                mujeres y niñas.”
+              </div>
+
+              <p>
+                En el parque Stephen’s Green de Dublín está emplazado un
+                monumento que recuerda a las niñas y mujeres que pasaron y
+                murieron por las lavanderías del horror. Todo parece poco, y lo
+                es. No existe compensación posible para tantos años de
+                sometimiento, dolor, complicidad y el silencio más absoluto.
+              </p>
+            </section>
+
+            <section id="bio" class="bio-box">
+              <h2>Sobre la autora</h2>
+
+              <div class="bio-content">
+                <img
+                  src="img/Danisaco.png"
+                  alt="Foto de María Daniela Saccone"
+                  class="author-photo"
+                />
+
+                <p>
+                  María Daniela Saccone es traductora pública en idioma inglés y
+                  profesora de inglés, con sólida formación académica y
+                  experiencia docente en el ámbito universitario. Actualmente se
+                  desempeña como docente en la Universidad Nacional de Lanús,
+                  donde dicta las asignaturas Traducción Técnica II y Traducción
+                  Técnica III, correspondientes a la carrera de Traductorado
+                  Público en Idioma Inglés. Asimismo, es responsable del
+                  Seminario de Transcreación y Copywriting, que aborda las
+                  dimensiones creativas de la traducción aplicadas a contextos
+                  publicitarios y culturales en la misma carrera.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <div class="article-actions">
+            <button
+              class="article-button"
+              type="button"
+              onclick="window.print()"
+            >
+              Imprimir / Guardar PDF
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          var target = document.querySelector(this.getAttribute("href"));
+          if (!target) return;
+
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

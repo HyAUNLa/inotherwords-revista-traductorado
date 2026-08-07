@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      La perspectiva de género como eje transversal en el desarrollo curricular
+    </title>
+    <meta
+      name="description"
+      content="Artículo de Lorena Gola sobre perspectiva de género y desarrollo curricular."
+    />
+
+    <style>
+      :root {
+        --detalle: #325862;
+        --onyx: #353839;
+        --card-bg: #f4fbfd;
+        --card-bg-2: #ffffff;
+        --muted: #657174;
+        --line: rgba(50, 88, 98, 0.26);
+        --soft-line: rgba(50, 88, 98, 0.14);
+        --shadow: rgba(30, 50, 56, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          #eef8fb 0%,
+          #ffffff 42%,
+          #edf7fa 100%
+        );
+        color: var(--onyx);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.68;
+      }
+
+      .article-page {
+        width: 100%;
+        padding: 48px 18px;
+      }
+      .article-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .article-card {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.9),
+            rgba(244, 251, 253, 0.98)
+          ),
+          var(--card-bg);
+        border: 1px solid var(--line);
+        box-shadow: 0 22px 60px var(--shadow);
+        padding: clamp(28px, 5vw, 64px);
+      }
+
+      .article-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 9px;
+        background: var(--detalle);
+      }
+
+      .article-kicker {
+        margin: 0 0 18px;
+        color: var(--detalle);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .article-title {
+        max-width: 820px;
+        margin: 0;
+        color: var(--onyx);
+        font-size: clamp(1rem, 2.5vw, 2.2rem);
+        line-height: 1.08;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .article-author {
+        margin: 22px 0 0;
+        color: var(--detalle);
+        font-size: clamp(1rem, 2vw, 1.24rem);
+        font-weight: 700;
+      }
+
+      .article-divider {
+        width: 100%;
+        height: 1px;
+        margin: 34px 0;
+        background: linear-gradient(
+          90deg,
+          var(--detalle),
+          var(--line),
+          transparent
+        );
+      }
+
+      .article-intro {
+        margin: 0;
+        max-width: 790px;
+        color: var(--onyx);
+        font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+        line-height: 1.75;
+      }
+
+      .article-index {
+        margin: 38px 0;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--soft-line);
+        border-left: 5px solid var(--detalle);
+      }
+
+      .article-index h2 {
+        margin: 0 0 14px;
+        color: var(--detalle);
+        font-size: 0.86rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .article-index ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .article-index a {
+        color: var(--onyx);
+        font-size: 0.98rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .article-index a::before {
+        content: "—";
+        color: var(--detalle);
+        margin-right: 8px;
+      }
+
+      .article-index a:hover {
+        color: var(--detalle);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .article-content {
+        display: grid;
+        gap: 34px;
+      }
+
+      .article-section {
+        scroll-margin-top: 28px;
+      }
+
+      .article-section h2 {
+        margin: 0 0 16px;
+        padding-bottom: 10px;
+        color: var(--detalle);
+        border-bottom: 1px solid var(--line);
+        font-size: clamp(1.22rem, 2vw, 1.6rem);
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .article-section p {
+        margin: 0 0 18px;
+        color: var(--onyx);
+        font-size: 1.02rem;
+      }
+
+      .article-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .quote-box {
+        margin: 28px 0;
+        padding: 24px;
+        background: rgba(50, 88, 98, 0.07);
+        border-left: 5px solid var(--detalle);
+        color: var(--onyx);
+        font-size: 1.05rem;
+        font-style: italic;
+        line-height: 1.75;
+      }
+
+      .reference-list {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--onyx);
+        font-size: 0.98rem;
+      }
+
+      .reference-list li {
+        margin-bottom: 10px;
+      }
+
+      .bio-box {
+        margin-top: 44px;
+        padding: 28px;
+        background: var(--card-bg-2);
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--detalle);
+      }
+
+      .bio-box h2 {
+        margin: 0 0 14px;
+        color: var(--detalle);
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .bio-box p {
+        margin: 0;
+        color: var(--onyx);
+        font-size: 1rem;
+      }
+
+      .bio-content {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .author-photo {
+        width: 160px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border: 4px solid var(--detalle);
+        background: #ffffff;
+        box-shadow: 0 10px 26px rgba(50, 88, 98, 0.18);
+      }
+
+      .article-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .article-button {
+        appearance: none;
+        border: 1px solid var(--detalle);
+        background: var(--detalle);
+        color: #ffffff;
+        cursor: pointer;
+        padding: 12px 18px;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          background 160ms ease,
+          color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .article-button:hover {
+        background: transparent;
+        color: var(--detalle);
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 640px) {
+        .article-page {
+          padding: 22px 12px;
+        }
+        .article-card {
+          padding: 30px 20px;
+        }
+        .article-index {
+          padding: 18px;
+        }
+        .article-actions {
+          justify-content: stretch;
+        }
+        .article-button {
+          width: 100%;
+        }
+        .bio-content {
+          grid-template-columns: 1fr;
+        }
+        .author-photo {
+          width: 140px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+        .article-page {
+          padding: 0;
+        }
+        .article-card {
+          box-shadow: none;
+          border: none;
+        }
+        .article-actions {
+          display: none;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="article-page">
+      <div class="article-container">
+        <article class="article-card">
+          <p class="article-kicker">Artículo</p>
+
+          <h1 class="article-title">
+            La perspectiva de género como eje transversal en el desarrollo
+            curricular
+          </h1>
+
+          <p class="article-author">Prof. Trad. Púb. Lorena Gola</p>
+
+          <div class="article-divider"></div>
+
+          <p class="article-intro">
+            En el mundo actual, con los avances tecnológicos en las
+            comunicaciones, los movimientos migratorios y la globalización, se
+            establecen vínculos de mayor conexión entre los países del mundo,
+            enriqueciendo las relaciones interculturales y aportando cambios
+            favorables en la sociedad.
+          </p>
+
+          <nav class="article-index" aria-label="Índice del artículo">
+            <h2>Índice</h2>
+            <ul>
+              <li>
+                <a href="#fundamentacion"
+                  >Fundamentación. Análisis y conceptualización</a
+                >
+              </li>
+              <li>
+                <a href="#enfoque"
+                  >El enfoque de género en la enseñanza de la lengua inglesa</a
+                >
+              </li>
+              <li>
+                <a href="#gramatical"
+                  >El género como categoría gramatical y lingüística</a
+                >
+              </li>
+              <li>
+                <a href="#binarismo"
+                  >El binarismo de género en la transferencia lingüística</a
+                >
+              </li>
+              <li><a href="#conclusiones">Conclusiones</a></li>
+              <li><a href="#referencias">Referencias bibliográficas</a></li>
+              <li><a href="#bio">Sobre la autora</a></li>
+            </ul>
+          </nav>
+
+          <div class="article-content">
+            <section id="fundamentacion" class="article-section">
+              <h2>Fundamentación. Análisis y conceptualización.</h2>
+
+              <p>
+                En este contexto social, político y económico aparecen nuevos
+                modelos de identidades que se entrelazan transformando los
+                esquemas hegemónicos tradicionales. Es en este escenario,
+                proyectado al ámbito educativo se recrean valores sobre la no
+                discriminación, la tolerancia y el respeto hacia otras culturas,
+                promoviendo la integración de ideas, prácticas y políticas
+                educativas integradas, que impulsan la reflexión respecto de la
+                igualdad de oportunidades y la equidad en todas sus
+                manifestaciones. La multiculturalidad es un hecho en nuestras
+                aulas y el sistema educativo debe adaptarse a estos cambios.
+              </p>
+
+              <p>
+                Es posible pensar la educación académica formal actual dentro un
+                espacio que se integra al trayecto histórico-cultual, para
+                replantearse de forma constante y dinámica las relaciones de
+                justicia, libertad, igualdad y solidaridad, fundamentando y
+                rechazando las posiciones que justifican la exclusión social. Es
+                así como se rompe la visión fragmentada del conocimiento, en un
+                análisis colectivo que interpele a todas y cada una de las
+                asignaturas del currículo, a través de contenidos conceptuales,
+                procedimentales y actitudinales, en base a argumentos
+                curriculares articulados. En este sentido, las identidades
+                culturales y de género constituyen aspectos ineludibles a la
+                hora de pensar en el desarrollo curricular.
+              </p>
+
+              <div class="quote-box">
+                “En la construcción social del género se interceptan una red de
+                mediaciones subjetivas y culturales: entorno familiar,
+                institución escolar, influencia del grupo de pertenencia, clase
+                social, tradición religiosa y cultural, raza, etnia que influyen
+                de manera significativa.” (Marta Lamas, 1992)
+              </div>
+
+              <p>
+                Todo lo que es construido socialmente en diferentes momentos
+                históricos-culturales, atravesados por la educación, el uso del
+                lenguaje, la familia, la interrelación con pares y adultos
+                significativos, las etnias, las instituciones, la política o la
+                religión definen y estructuran las relaciones entre las
+                personas. El alejamiento de patrones tradicionales asociados a
+                la masculinidad o femineidad hizo que los hombres y mujeres
+                pudieran vincularse con otros estilos de identidades humanas.
+              </p>
+
+              <p>
+                La masculinidad de acuerdo con su universo simbólico, asociada
+                de manera natural al liderazgo, la autoridad, el poder, la
+                inteligencia, el establecimiento de reglas y normas, el control
+                de las instituciones poco a poco deja espacio a la apropiación
+                de otras identidades, en un contexto de múltiples prácticas
+                sociales y en ellas el rol de la mujer.
+              </p>
+
+              <p>
+                Este sistema sostenido a través de las leyes y normas de
+                conducta asociadas al patriarcado tendientes a la invisibilidad
+                y la subvaloración de las mujeres, comienza a velarse ante
+                nuevas normas sociales más significativas y se inscribe en
+                representaciones culturales que van más allá de la diferencia
+                sexual, orientando su acción hacia nuevos roles sociales en lo
+                laboral, doméstico, educativo y político. Es así como se recrean
+                nuevos esquemas de pensamientos y acción compartidos y se
+                posibilita que estas prácticas se prolonguen en el tiempo
+                mediante la acción pedagógica diaria y los ritos
+                institucionales. (Guevara Ruiseñor, 2002).
+              </p>
+
+              <p>
+                Es necesario analizar en diferentes escenarios, las formas de
+                organización y funcionamiento de nuestra sociedad y sus
+                instituciones, adaptando las propuestas curriculares a estas
+                nuevas configuraciones. Es en el “habitus” al que alude el
+                sociólogo francés Pierre Bourdieu (1930-2002), en el que cada
+                persona de acuerdo a su rol y posición social desarrolla
+                determinadas formas de actuar e ideas y sentimientos, que se
+                manifiestan en un campo de acción.
+              </p>
+
+              <p>
+                En la conformación de estos espacios, ya sean científicos,
+                deportivos, literarios, artísticos, políticos, gremiales,
+                estudiantiles o laborales, las personas se posicionan según sus
+                criterios, valoraciones, conceptos y experiencias frente a los
+                estereotipos que convergen en la dinámica de los mismos.
+              </p>
+
+              <p>
+                En las últimas décadas se ha experimentado una transformación
+                reveladora en las prácticas culturales que conducen a cambios
+                valiosos en la vida de las mujeres, como así también en la de
+                los hombres, “ no podrá aceptarse un cambio en uno de los
+                géneros si el otro no evoluciona también: la ruptura de la
+                relación especular entre los géneros supone un conflicto y un
+                desajuste social entre hombres y mujeres que exige un nuevo
+                planeamiento de conjunto” (Subirats, 1999)
+              </p>
+
+              <p>
+                Incluir la visión de género en la universidad implica considerar
+                los contenidos conceptuales en los planes de estudio de las
+                carreras, los diferentes medios didácticos en los diversos
+                procesos de aprendizaje, partiendo de una política educativa y
+                gestión institucional, que promueva la capacidad crítica en la
+                igualdad de género y se origine desde la cotidianidad de la vida
+                universitaria, transformando los sistemas discriminatorios en
+                espacios de análisis y reflexión. La transversalidad de género
+                sería tanto una estrategia política como pedagógica.
+              </p>
+
+              <p>
+                Es menester incorporar como eje transversal o “mainstreaming” al
+                género desde una perspectiva interdisciplinaria que le permita
+                al estudiante comprender y explicar las relaciones entre los
+                sistemas de organización social, los principios éticos, los
+                derechos humanos, los fundamentos jurídicos y las prácticas
+                político-institucionales.
+              </p>
+
+              <p>
+                Según la página oficial de la UNESCO, “la cuestión de género
+                debe ser considerada prioritaria en la planificación de la
+                educación, desde las infraestructuras hasta el desarrollo de
+                materiales o los procesos pedagógicos.” En el artículo 85 de la
+                IV Conferencia de la Organización de Naciones Unidas sobre la
+                mujer, queda expresado: "Desarrollar programas de estudios de
+                género en la educación, de modo que contribuya al desarrollo de
+                esta perspectiva en la investigación científica; la enseñanza y
+                el quehacer profesional de profesores y futuros profesionales ".
+              </p>
+            </section>
+
+            <section id="enfoque" class="article-section">
+              <h2>
+                El enfoque de género en la enseñanza de la lengua inglesa.
+              </h2>
+
+              <p>
+                E n la enseñanza de la lengua como vehículo de expresión de la
+                cultura e idiosincrasia de los pueblos que la utilizan, se
+                tienen en cuenta, las implicancias de las interacciones
+                culturales, como proceso multifactorial, que caracteriza a la
+                sociedad en que se inscribe.
+              </p>
+
+              <p>
+                En este sentido y desde una visión de análisis relacional del
+                género, fundada en múltiples variables de distinto orden, es que
+                Judith Butler (1990) considera estudiar la cuestión del género
+                como “la construcción cultural y discursiva de las identidades
+                de género que varía según los contextos sociales, políticos,
+                étnicos, de clase, sexuales que intervienen en esa
+                configuración.”
+              </p>
+
+              <p>
+                El género desde la perspectiva discursiva se construye como una
+                categoría relacional asociada a diferentes ámbitos, creando
+                representaciones y significados en las prácticas sociales. El
+                “género se realiza en el discurso” (Chris Kramarae, 2003) Y si
+                el discurso es una forma de uso lingüístico y de interacción,
+                condicionada por un contexto social, entonces la realización del
+                género tiene lugar en la interrelación dialéctica de las
+                dimensiones discursivas. “ El género como construcción social y
+                discursiva se crea en el ámbito lingüístico (el texto), el uso
+                del lenguaje y la comunicación, y la interacción.” (Cate
+                Poynton, 1989)
+              </p>
+            </section>
+
+            <section id="gramatical" class="article-section">
+              <h2>El género como categoría gramatical y lingüística</h2>
+
+              <p>
+                En el proceso de enseñanza-aprendizaje, la gramática está
+                integrada a los contenidos textuales científicos, literarios y
+                socio-políticos, incluyendo a las identidades de género en sus
+                diversas concepciones y alcances. Es desde este ámbito donde se
+                resignificarán los contenidos de las asignaturas específicas de
+                la carrera, en un marco de investigación interdisciplinaria, con
+                les demás docentes, para integrar el conocimiento de las
+                estructuras propias del concepto de género y lenguaje inclusivo.
+              </p>
+
+              <p>
+                Para esto es necesario deconstruir el discurso a través de un
+                conjunto de recursos y estructuras, como expresión de
+                significados implícitos, reglas de coherencia y estrategias
+                discursivas articuladas en unidades semánticas que representan
+                lo que les estudiantes saben y piensan. Es en la transferencia
+                de un idioma al otro (inglés-español) donde se crean los
+                significados de las palabras y de las relaciones entre ellas
+                como el resultado de la selección que hacen les estudiantes
+                lectores de la lengua inglesa.
+              </p>
+
+              <p>
+                El orden y las relaciones formales semánticas atienden las
+                relaciones jerárquicas, causales o condicionales del discurso y
+                están cargadas de sentido. En ese traspaso de un idioma al otro
+                no sólo se traslada el género lingüístico, sino que se proyecta
+                cultura e ideología. Pues entonces es aquí donde deben quedar
+                garantizadas las alternativas al lenguaje sexista.
+              </p>
+
+              <div class="quote-box">
+                “Las inferencias no son arbitrarias, sino que parten de
+                creencias particulares subyacentes, de opiniones, y del
+                conocimiento de la situación concreta.” (Van Dijk, 2003).
+              </div>
+
+              <p>
+                Las estructuras semánticas son portadoras de ideas que permiten
+                expresar opiniones, construyendo expresiones valorativas. Para
+                ello, se desarrolla un mecanismo del pensamiento que intenta
+                explicar cómo funciona la sociedad, su cultura y el género en su
+                transversalidad.
+              </p>
+
+              <p>
+                Les estudiantes representan de esta manera una realidad
+                hipotética subjetiva, percibida en un plano simbólico interno,
+                creado en base a experiencias previas que le permiten predecir
+                resultados en las acciones, en una constante evolución, es decir
+                se van adaptando a través del tiempo conforme a nuevas
+                vivencias. En este proceso construyen el conocimiento con otros,
+                dándole amplitud y diversidad al concepto de género.
+              </p>
+            </section>
+
+            <section id="binarismo" class="article-section">
+              <h2>
+                El binarismo de género en la transferencia lingüística del
+                inglés al español
+              </h2>
+
+              <p>
+                En el análisis de la etimología del término anglosajón "gender"
+                se observa que no se corresponde totalmente con el concepto en
+                español. En inglés tiene una acepción que apunta directamente a
+                los sexos (o sea como accidente gramatical) mientras que en
+                español se refiere a la clase, especie o tipo a la que
+                pertenecen las cosas. La palabra "genre" (género) proviene del
+                francés y originalmente del latín, con el significado de "tipo"
+                o "clase.
+              </p>
+
+              <p>
+                El género como atributo del nombre o clase gramatical, relativo
+                a la construcción de lo masculino y lo femenino sólo se
+                comprende en función del género gramatical, pero concebirlo como
+                relación entre los sexos, o como simbolización o construcción
+                cultural implica darle otra mirada.
+              </p>
+
+              <p>
+                Para Judith Butler (1990) “el lenguaje refuerza y naturaliza el
+                binomio hombre/mujer y lo presenta como dos únicos géneros
+                posibles.” De este modo, se elimina la posibilidad de que se
+                nombren o representen otras identidades. Y agrega que “ los
+                sistemas de representación enmascaran un masculino genérico
+                universal .”
+              </p>
+
+              <p>
+                Gilles Deleuze y Felix Guattari (1975) destacan que “ existe una
+                máquina de enseñanza obligatoria que impone coordenadas
+                semióticas a los sujetos con bases gramaticales duales, tales
+                como femenino/masculino y singular/plural.”
+              </p>
+
+              <p>
+                La gramática en los enfoques de género se orienta al significado
+                y la función en los diferentes tipos discursivos. Su objetivo es
+                el reconocimiento de ésta como un recurso dinámico en la
+                comprensión de los textos en el idioma inglés.
+              </p>
+
+              <p>
+                El inglés opera a través del género que se denomina natural
+                porque alude a una supuesta relación semántica entre los
+                atributos de aquello que se nombra y su designación. Esta
+                relación implica atributos que, como postula Charles Quirk,
+                (1985), se vinculan, en teoría, con las características
+                biológicas del sexo del referente. Se utiliza femenino cuando el
+                referente es una mujer y masculino cuando es un hombre, siendo
+                el resto de las realidades, de género neutro.
+              </p>
+
+              <p>
+                En general y a diferencia de lo que ocurre en español, en
+                inglés, los sustantivos, los adjetivos, y los determinantes
+                (pronombres demostrativos, artículos definidos e indefinidos,
+                pronombres distributivos, entre otros), no llevan marcas
+                morfológicas que evoquen su género. Así, the doctor puede
+                referirse a la figura de un doctor, cualquiera sea su identidad
+                de género. El inglés no tiene género gramatical.
+              </p>
+
+              <p>
+                En el español existen dos géneros, y todos los sustantivos
+                pertenecen a uno de ellos. En inglés, aunque sí que se puede
+                distinguir femenino y masculino, los sustantivos no tienen un
+                género asociado. Esto ha dado lugar a una facilidad única a la
+                hora de emplear un lenguaje neutro. La tendencia actual es hacia
+                un idioma de género cada vez menos marcado.
+              </p>
+
+              <p>
+                Monique Wittig (1992) afirma que “ el inglés es el idioma que
+                más puede aproximarse a volver obsoleta la categoría
+                sexo-génerica del lenguaje. Las marcas de género son símbolos
+                léxicos que, de ser erradicados, podrían cambiar el lenguaje por
+                completo.” Deleuze y Guattari (1975) proponen “ desviarse del
+                modelo dual gramatical mediante movimientos nómades que generen
+                transformaciones a través de la desterritorialización de la
+                lengua.”
+              </p>
+
+              <p>
+                Se entiende que el “ nomadismo” hace alusión al desplazamiento
+                de la lengua , coloca al lenguaje y a las palabras como piezas
+                móviles e intercambiables y configuran a la lengua como un
+                constructo social dinámico. Es ejemplo de esta movilidad, la
+                progresiva desaparición en el idioma inglés de ciertos sufijos
+                que forman el femenino, como «- ess » en « waitress », « duchess
+                » y « actress o los sufijos de las profesiones terminadas en «-
+                man ».
+              </p>
+
+              <p>
+                Durante un tiempo, se empleaban palabras diferentes para hombres
+                y para mujeres, pero la tendencia actual es optar por una
+                palabra neutra: policeman-policewoman→police agent;
+                fireman-firewoman→firefighter, entre otros. Gracias a la
+                ausencia de género gramatical, el inglés no tiene ningún
+                problema en ocultar el género en una oración en la que se
+                menciona el sujeto: The doctor was working at the hospital. — El
+                doctor/la doctora estaba trabajando en el hospital. You are
+                tired — Estás cansado/a.
+              </p>
+
+              <p>
+                En estos casos la traducción exige conocer una información extra
+                relativa al sexo de la persona que realiza la acción. En el caso
+                del you según el contexto se podrá tratar de la segunda persona
+                del singular o plural. En el caso de los pronombres posesivos,
+                en español son neutros, pero en inglés no: The doctor was
+                working at his/her office. — El/La doctor/a estaba trabajando en
+                su oficina. Lo mismo ocurre con otros pronombres: He/she was
+                sitting on the sofa. — Estaba sentado/a en el sofá.
+              </p>
+
+              <p>
+                El inglés, generalmente posee mayor cantidad de sustantivos
+                genéricos, o sea, que se utiliza uno para ambos géneros, sin
+                tomar el del género masculino. Por ejemplo, friend-amigo/a,
+                writer-escritor/a, lawyer-abogado/a, entre otros.
+              </p>
+
+              <p>
+                Sin embargo, en inglés, al igual que en español, existe una
+                tendencia a usar el masculino con el rol o jerarquía de
+                genérico, o universal que remite a la humanidad, o sea, para
+                referirse al género masculino tanto como al femenino. Esta
+                tendencia en el contexto de los estudios de género en el campo
+                de la sociolingüística, se ha llamado “Male-As-Norm Principle” o
+                “Man Principle” (Friederike Braun, 1997), que opta por el
+                masculino cuando se desconoce el sexo del sujeto al que se
+                refiere.
+              </p>
+
+              <p>
+                O sea, el uso de términos masculinos para referirse a los
+                masculinos en particular y a los seres humanos en general. Entre
+                los más utilizados se encuentran: man, man-to-man, prehistoric
+                man, brotherhood, chairman, y policeman (hombre, de hombre a
+                hombre, hombre prehistórico, hermandad, presidente y policía).
+              </p>
+
+              <p>
+                Existen otros, que son genéricos, por ejemplo "parents", en
+                inglés se refiere a la madre y al padre de conjunto, mientras
+                que en español se utiliza el término masculino padres; child en
+                singular y children en plural para referirse a ambos, las niñas
+                y los niños. Según estudios comparativos realizados, la cantidad
+                es mucho mayor en inglés que en español.
+              </p>
+
+              <p>
+                Es en este sentido importante mediar entre las diferentes
+                culturas: una lengua de origen sin marcas de género y el español
+                que si nos obliga a especificarlo. En este punto deben
+                compensarse o suplementarse las diferencias de marca de género.
+                Una estrategia posible es la neutralización o generalización. Se
+                sustituye el término no sexista por uno neutro en español:
+                teachers = profesores/profesoras→personal docente.
+              </p>
+
+              <p>
+                Estas palabras sin marca de género con el tiempo pueden
+                constituirse como neutros y de esta manera conducir a actitudes
+                no discriminatorias.
+              </p>
+
+              <div class="quote-box">
+                “En español, el género gramatical reconoce distintas
+                manifestaciones morfológicas, que se reflejan en las inflexiones
+                que acompañan a los sustantivos, adjetivos y determinantes. El
+                género gramatical puede definirse inicialmente como una
+                categoría arbitraria, no motivada, de carácter formal que afecta
+                principalmente la concordancia de las palabras que acompañan a
+                un sustantivo determinado y su morfología. Así, el español, por
+                las propias restricciones del sistema de la lengua, se ve
+                obligado a pronunciarse respecto del género de los sustantivos.”
+                (M. L Sportuno, 2015)
+              </div>
+
+              <p>
+                “ Se le otorga género masculino o femenino no sólo a seres
+                sexuados, sino también a las cosas inanimadas: todos los objetos
+                y personas tienen obligatoriamente un género gramatical femenino
+                o masculino (y en ocasiones neutro)” (Olga Castro Vazquez,
+                2008). Por eso, debe decir: el doctor, la doctora, o, incluso,
+                el/la doctor/a.
+              </p>
+
+              <p>
+                Ahora bien, el género gramatical puede recoger, en ocasiones, un
+                sentido que tiene que ver con la representación simbólica que se
+                liga a espacios masculinos o femeninos. No siempre el género
+                natural coincide con el gramatical. Y es en los distintos tipos
+                discursivos donde se explora este sentido del género de manera
+                particular.
+              </p>
+
+              <p>
+                Cuando nos enfrentamos a la enseñanza de una lengua en el
+                contexto de una clase en la universidad, en la que se ponen en
+                juego el pasaje del inglés al español, el problema radica, entre
+                otros, en las diferencias que pueden existir en la percepción de
+                lo que es el género natural. Es ahí donde entra en juego el peso
+                cultural y simbólico de las palabras. Cada idioma tendrá
+                parámetros lingüísticos y culturales que se vinculan íntimamente
+                con la cuestión del género. Sin dudas, “ el espacio del
+                interlingüismo cultural en el que se gestan los discursos
+                complejiza la cuestión de la representación de las identidades
+                de género.” (M. L Sportuno, 2015)
+              </p>
+            </section>
+
+            <section id="conclusiones" class="article-section">
+              <h2>Conclusiones</h2>
+
+              <p>
+                A modo de cierre, y retomando el pensamiento de la escritora
+                francesa Monique Wittig, “ es el mundo anglófono el que más se
+                aproxima a erradicar el binarismo sexo-genérico en el lenguaje,
+                representado por símbolos léxicos que marcan el género.” Sabemos
+                que estas transformaciones trascienden el plano lexical y
+                subyacen otros como el filosófico, político, económico, y
+                cultural.
+              </p>
+
+              <p>
+                Deconstruir esa oposición binaria (sexo-género lingüístico)
+                implica pensar en otras realidades y relaciones de poder
+                posibles. Como afirma la lingüista Deborah Cameron (1990), “a
+                change in linguistic practice is not just a reflection of some
+                more fundamental social change: it is, itself, a social change”
+                (un cambio en la práctica lingüística no solo refleja los
+                cambios sociales más fundamentales, sino que es, en sí mismo, un
+                cambio social.)
+              </p>
+
+              <p>
+                En ese sentido me pregunto: ¿Es factible cambiar el nombre a las
+                cosas y entrar en un nuevo mundo simbólico para reapropiarse de
+                ciertas significaciones y códigos con el fin de subvertir otros?
+              </p>
+
+              <p>
+                El poder de hacer cosas con las palabras es mucho más efectivo
+                que cualquier otro acto de autoridad. “ El efecto del poder de
+                las palabras y su uso reiterado en el tiempo se apoyan aún con
+                mayor fuerza si son emitidas y autorizadas por instituciones
+                socialmente legitimada s.” (Judith Butler, 2008)
+              </p>
+
+              <p>
+                Es en la cotidianidad que se construye el lenguaje como
+                estructura de pensamiento y medio de expresión y como tal puede
+                ser comprendido, modificado, o interpelado en el diálogo
+                intercultural entre docentes y estudiantes. Es nuestra tarea
+                como profesores/as de lenguas extranjeras en la universidad
+                desmontar la estructura del lenguaje de los textos que les
+                presentamos a nuestros estudiantes, de manera tal que se
+                expresen en múltiples interpretaciones posibles.
+              </p>
+
+              <p>
+                Al deconstruir los discursos se revisan conceptos y se descubren
+                procesos históricos y culturales que los subyacen, se
+                manifiestan intencionalidades, sentidos y argumentos como
+                expresión material del pensamiento y del conocimiento. Se
+                construye una conciencia social, donde se favorecen relaciones y
+                actitudes de respeto frente a la diversidad cultural y de
+                géneros, promoviendo la tolerancia y la empatía entre pares.
+              </p>
+
+              <p>
+                Atendiendo a un perfil de egresados que persigue el alcance de
+                un/a profesional capaz de actualizar sus conocimientos en un
+                marco político, social y cultural dinámico, debe pensarse en un
+                currículo espiralado, abierto a los cambios de escenarios y
+                paradigmas, en un espacio multidisciplinario, que permita la
+                integración de saberes.
+              </p>
+
+              <p>
+                Es en el colectivo donde se incentiva a les estudiantes que
+                reconozcan y valoren sus propias características generacionales,
+                sus raíces, las identidades que lo definen y respeten las
+                diferencias, en representaciones educativas donde muestren
+                habilidades socio-cognitivas en la resolución de conflictos y a
+                través del pensamiento estratégico con respecto a la
+                configuración del género y la diversidad.
+              </p>
+
+              <p>
+                Un claro enfoque sobre sus acciones futuras en el desempeño
+                profesional, y en su plan de vida, apelando a habilidades
+                lingüísticas, sentido de escucha y comprensión, seguridad y
+                desenvolvimiento en una sociedad en permanente cambio. Educar
+                desde la inclusión y la igualdad implica dar sentido y
+                visibilidad a las emociones, sentimientos y expresiones en su
+                correlato personal y profesional. Es por eso que decimos SI a
+                las diferencias y NO a la desigualdad.
+              </p>
+            </section>
+
+            <section id="referencias" class="article-section">
+              <h2>Referencias bibliográficas.</h2>
+
+              <ul class="reference-list">
+                <li>
+                  Bourdieu, P (2001). La dominación masculina, USA, Stantford
+                  University Press.
+                </li>
+                <li>
+                  Braun, Friederike (1997), Making men out of people: the MAN
+                  principle in translating genderless forms, Communicating
+                  gender in context, Helga Kotthoff e Ruth Wodak (eds.),
+                  Amsterdam, John Benjamins: 3-30.
+                </li>
+                <li>
+                  Butler, J. (1990). Gender trouble. Feminism and the Subversion
+                  of Identity. Londres y Nueva York: Routledge.
+                </li>
+                <li>
+                  Cameron, D. (1992). Feminism and Linguistic Theory. Nueva
+                  York: St Martin’s Press.
+                </li>
+                <li>
+                  Cavana, Ma. Luisa (1995) “Diferencia”; Cobo Bedia, Rosa (1995)
+                  “Género”, Jiménez Parona, Ángeles (1995) “Igualdad”; De
+                  Miguel, Ana (1995) “Los feminismos a través de la historia” en
+                  : Amorós Celia (comp.) (1995) 10 palabras clave sobre mujer,
+                  España, EVD.
+                </li>
+                <li>
+                  Connell, Robert W. (1995) La organización social de la
+                  masculinidad en Lomas Carlos ¿Todos los hombres son iguales?
+                  Identidades masculinas y cambios sociales, Barcelona Paidós.
+                  Recuperado de: www.cholonautas.edu.pe / Biblioteca Virtual de
+                  Ciencias Sociales.
+                </li>
+                <li>
+                  De Lauretis Teresa (2000) La tecnología del género. Tomado de
+                  Technologies of Gender. Essays on Theory, Film and Fiction,
+                  London, Macmillan Press,1989, págs. 1-30.
+                </li>
+                <li>
+                  Guattieri F. Deleuze. G. (1975) Kafka: Por una Literatura
+                  Menor. Editora Nacional. Madrid.
+                </li>
+                <li>
+                  Kramarae, Ch (1983) Language, Gender and Society. Rowley,
+                  Mass. : Newbury House.
+                </li>
+                <li>
+                  Lamas, Marta (1997). “Usos, dificultades y posibilidades de la
+                  categoría género” en: LAMAS, Marta (comp.) (1997). El Género:
+                  la construcción cultural de la diferencia sexual, México,
+                  Pueg.
+                </li>
+                <li>
+                  Lomas, Carlos (2003) La dictadura del patriarcado y la
+                  insurgencia masculina.
+                </li>
+                <li>
+                  Poynton C. (1989). Language and Gender: Making the Difference.
+                  Oxford University Press; 2nd edition.
+                </li>
+                <li>
+                  Puleo, A. (1995) “El patriarcado” en Amorós Celia, Diez
+                  palabras clave sobre mujer, España. Verbo Divino.
+                </li>
+                <li>
+                  Quirk, R. et al. (1985). A Comprehensive Grammar of the
+                  English Language. Londres: Longman
+                </li>
+                <li>
+                  Simon, S. (1996).Gender in Translation. Cultural Identity and
+                  the Politics of Transmission. Nueva York: Routledge.
+                </li>
+                <li>
+                  Sportuno M.L. (2015) Identidades culturales y de género y la
+                  enseñanza de lenguas extranjeras. Repositorio institucional de
+                  la Facultad de Humanidades y Ciencias de la Educación (FaHCE)
+                  de la Universidad Nacional de La Plata.
+                </li>
+                <li>
+                  Van Dijk. T.A (2005) Estructuras y Funciones del Discurso.
+                  Siglo XXI Editores. Buenos Aires. Argentina.
+                </li>
+                <li>
+                  Wittig Monique (2205) El pensamiento heterosexual y otros
+                  ensayos. Egales Editorial. Madrid. España.
+                </li>
+                <li>
+                  Wodak, R. Benke G. (1997) Gender as Sociolinguistic Variable.
+                  New Perspectives on Variation Studies. Blackwell Publishing
+                  Ltd.
+                </li>
+              </ul>
+            </section>
+
+            <section id="bio" class="bio-box">
+              <h2>Sobre la autora</h2>
+
+              <div class="bio-content">
+                <img
+                  src="img/lorena.jpeg"
+                  alt="Foto de Lorena Gola"
+                  class="author-photo"
+                />
+
+                <p>
+                  Traductora Pública y Literaria, Técnico-científica en idioma
+                  inglés, especializada en traducción jurídica y económica.
+                  Traductora free-lance en el ámbito público y privado.
+                  Docente-investigadora Adjunta de las carreras de Pregrado y
+                  Grado (concursada - Dpto de Planificación y Políticas
+                  Públicas) de la Universidad Nacional de Lanús y miembro del
+                  equipo de investigación que estudia la enseñanza de la
+                  lecto-comprensión en lenguas extranjeras de nuestra
+                  universidad. Correctora de textos científicos especializados
+                  en área jurídica y económica (Facultad de Cs Económicas. UBA -
+                  IIET). Docente-examinadora de Cambridge English (Centro
+                  examinador: Asociación Argentina de Cultura Inglesa. Docente
+                  de Lengua Inglesa, Literatura, escritura y trabajos de
+                  proyecto en el Instituto Balmoral. Docente remota- Plan CEIBAL
+                  (Conectividad educativa de informática Básica para aprendizaje
+                  en Línea. R.O Uruguay). Diseño de material didáctico y
+                  preparación de exámenes oficiales AACI. Dirección de Talleres
+                  de conversación y teatro en inglés.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <div class="article-actions">
+            <button
+              class="article-button"
+              type="button"
+              onclick="window.print()"
+            >
+              Imprimir / Guardar PDF
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          var target = document.querySelector(this.getAttribute("href"));
+          if (!target) return;
+
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
