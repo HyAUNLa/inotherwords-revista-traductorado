@@ -453,36 +453,95 @@ hr {
 
 .indice {
   color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
 }
 
-.indice li {
+.indice .indice-item {
   text-transform: uppercase;
   font-size: small;
   font-weight: 600;
-  padding: 8px 0;
+  padding: 4px;
+  text-align: left;
 }
 
-.indice h6 {
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  margin-bottom: 16px;
+.indice .indice-item:hover {
+  background: var(--color-secondary-light);
+}
+
+.indice-item.active {
+  background: var(--color-secondary);
+  color: var(--color-light);
+  pointer-events: none;
 }
 
 .article-preview {
-  border-bottom: 1px solid var(--color-secondary);
   display: flex;
-  width: 400px;
+  width: 300px;
   flex-direction: column;
-  padding: 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .article-preview .preview-type {
   text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.no-type {
+  border-top: 2px solid var(--color-secondary);
 }
 
 .article-preview .preview-title {
   font-weight: 600;
-  font-size: 1.2rem;
+}
+
+.article-preview:hover {
+  color: var(--color-secondary);
+}
+
+.article-preview-container {
+  display: flex;
+  width: 700px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.in-memoriam {
+  margin-top: 3rem;
+}
+
+.evento {
+  margin-top: 2rem;
+  border-top: 3px solid var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.evento span {
+  max-width: 550px;
+}
+
+.evento h6 {
+  margin: 0;
+}
+
+.in-memoriam div {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.in-memoriam img {
+  object-fit: contain;
+}
+
+img[alt="logo traductorado"] {
+  filter: grayscale(1);
 }
 
 @media (max-width: 1024px) {
@@ -523,7 +582,6 @@ hr {
   width: 100%;
   padding: 48px 18px;
   margin: 0;
-  /* background: linear-gradient(180deg, #eef8fb 0%, #ffffff 42%, #edf7fa 100%); */
   color: var(--color-primary);
   line-height: 1.68;
 }
@@ -541,7 +599,6 @@ hr {
   position: relative;
   overflow: hidden;
   background-color: #f8f9fa;
-
   padding: 3rem 1rem;
 }
 
