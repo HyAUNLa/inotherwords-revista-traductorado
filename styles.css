@@ -72,8 +72,7 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -321,7 +320,6 @@ main div h2 {
 }
 
 main div h5 {
-  max-width: 400px;
   color: var(--color-primary);
   margin-bottom: 12px;
 }
@@ -578,6 +576,36 @@ img[alt="logo traductorado"] {
 }
 
 /* ESTILOS DEL ARTICULO */
+table {
+  text-align: left;
+  margin: 1rem 0 2rem;
+}
+
+th,
+td {
+  border: 1px solid var(--color-primary);
+  padding: 4px 12px;
+}
+
+.article-content ol,
+.article-content ul {
+  margin-bottom: 2rem;
+}
+
+.article-content li {
+  margin-top: 1rem;
+}
+
+.reference-list li {
+  list-style-type: disc;
+}
+
+.article-subtitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 100px;
+}
+
 .article-page {
   width: 100%;
   padding: 48px 18px;
