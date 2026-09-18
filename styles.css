@@ -597,6 +597,11 @@ td {
   list-style-type: disc;
 }
 
+.article-divider {
+  margin: 1rem 0 2rem;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
 .article-subtitle {
   color: var(--color-primary);
   font-weight: 800;
@@ -667,9 +672,15 @@ td {
   color: var(--main);
   font-size: clamp(1rem, 2vw, 1.24rem);
   font-weight: 700;
-  border-bottom: 2px solid var(--color-secondary);
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+}
+
+.article-content h3 {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 4px;
+  margin-bottom: 0.5rem;
 }
 
 .article-intro {
