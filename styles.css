@@ -601,9 +601,14 @@ td {
 }
 
 .article-subtitle {
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-weight: 800;
+  font-size: 1rem;
   margin-top: 100px;
+}
+
+.footnotes {
+  font-size: smaller;
+  border-top: 0.5px solid var(--detalle);
 }
 
 .article-page {
@@ -754,7 +759,7 @@ td {
 
 .bio-box {
   margin-top: 44px;
-  padding: 28px;
+  padding: 1rem 1rem 0 1rem;
   background: var(--card-bg-2);
   border-top: 5px solid var(--color-secondary);
 }
@@ -779,6 +784,9 @@ td {
   grid-template-columns: 160px 1fr;
   gap: 24px;
   align-items: start;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--color-secondary-light);
+  padding-top: 1rem;
 }
 
 .author-photo {
