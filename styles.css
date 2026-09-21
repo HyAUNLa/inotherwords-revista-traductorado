@@ -114,6 +114,10 @@ nav img {
   object-fit: contain;
 }
 
+nav li {
+  list-style: none;
+}
+
 #menu a {
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
