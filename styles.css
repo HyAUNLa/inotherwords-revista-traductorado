@@ -827,7 +827,6 @@ td {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background: #ffffff;
-  box-shadow: 0 10px 26px rgba(50, 88, 98, 0.18);
 }
 
 .article-actions {
@@ -913,6 +912,12 @@ td {
   }
   .article-actions {
     display: none;
+  }
+  .article-content p {
+    font-size: 12px;
+  }
+  .bio-content p {
+    font-size: 10px;
   }
   a {
     color: inherit;
