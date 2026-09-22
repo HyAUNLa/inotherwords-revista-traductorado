@@ -617,6 +617,8 @@ td {
 .article-content ol,
 .article-content ul {
   margin-bottom: 2rem;
+  padding-left: 1rem;
+  overflow: visible;
 }
 
 .article-content li {
@@ -884,6 +886,16 @@ td {
   display: block;
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 145px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--color-dark);
+  z-index: 9999;
+}
+
 @media (max-width: 640px) {
   .article-page {
     padding: 22px 12px;
@@ -918,7 +930,8 @@ td {
   }
   .lang-selector,
   nav,
-  footer {
+  footer,
+  .scroll-progress {
     display: none;
   }
   .article-container {

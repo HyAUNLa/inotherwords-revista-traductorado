@@ -63,6 +63,7 @@
         </ul>
       </div>
     </nav>
+    <div class="scroll-progress"></div>
     <main class="article-page">
       <div class="article-container">
         <article class="article-card">
@@ -393,5 +394,17 @@
         <p>In Other Words 2026 © Todos los derechos reservados</p>
       </div>
     </footer>
+    <script>
+      const progress = document.querySelector(".scroll-progress");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const scrollHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = (scrollTop / scrollHeight) * 100;
+
+        progress.style.width = `${percentage}%`;
+      });
+    </script>
   </body>
 </html>
