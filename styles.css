@@ -953,6 +953,9 @@ td {
   .bio-content p {
     font-size: 9pt;
   }
+  .reference-list li {
+    font-size: 9pt;
+  }
   a {
     color: inherit;
     text-decoration: none;
