@@ -119,6 +119,10 @@ footer li {
   list-style: none;
 }
 
+[id] {
+  scroll-margin-top: 150px !important;
+}
+
 #menu a {
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
@@ -663,6 +667,7 @@ td {
 }
 
 .article-container {
+  margin-top: 200px;
   background-color: var(--color-light);
 }
 
@@ -911,8 +916,13 @@ td {
   body {
     background: #ffffff;
   }
-  .lang-selector {
+  .lang-selector,
+  nav,
+  footer {
     display: none;
+  }
+  .article-container {
+    margin: 0;
   }
   .article-page {
     padding: 0;
