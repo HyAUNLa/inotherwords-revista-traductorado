@@ -114,7 +114,8 @@ nav img {
   object-fit: contain;
 }
 
-nav li {
+nav li,
+footer li {
   list-style: none;
 }
 
@@ -303,14 +304,16 @@ main {
   min-height: 100vh;
   background-color: var(--color-primary);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 main > div {
   width: 900px;
   background-color: var(--color-light);
   color: var(--color-primary);
-  padding: 100px;
+  padding: 50px 100px;
   border-radius: 30px;
 }
 
@@ -330,6 +333,15 @@ main h4 {
   font-size: 36px;
   color: var(--color-primary);
   margin-bottom: 24px;
+}
+
+main .iow-info {
+  display: flex;
+  margin: 2rem 0 1rem;
+}
+
+main .iow-info > * {
+  flex: 1;
 }
 
 .content h5 {
@@ -651,14 +663,13 @@ td {
 }
 
 .article-container {
-  background-color: #f8f9fa;
+  background-color: var(--color-light);
 }
 
 .article-card {
   border-top: 6px solid var(--color-primary);
   position: relative;
   overflow: hidden;
-  background-color: #f8f9fa;
   padding: 3rem 1rem;
 }
 
@@ -914,10 +925,10 @@ td {
     display: none;
   }
   .article-content p {
-    font-size: 12px;
+    font-size: 11pt;
   }
   .bio-content p {
-    font-size: 10px;
+    font-size: 9pt;
   }
   a {
     color: inherit;
