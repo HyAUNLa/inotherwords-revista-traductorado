@@ -941,15 +941,34 @@ td {
   @page {
     size: A4;
     margin: 20mm 0;
+    @bottom-right {
+      content: counter(page);
+      margin-right: 5%;
+      font-family: var(--font-reading);
+      font-size: 9pt;
+    }
+    @bottom-left {
+      content: "En Otras Palabras /In Other Words";
+      margin-left: 5%;
+      font-family: var(--font-reading);
+      font-size: 9pt;
+    }
   }
   body {
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-page {
+    width: unset;
   }
   .lang-selector,
   nav,
   footer,
   .scroll-progress,
-  .footnotes a {
+  .footnotes a,
+  .lateral-menu-container {
     display: none;
   }
   .article-container {
