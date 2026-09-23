@@ -646,6 +646,10 @@ td {
   margin-bottom: 1rem;
 }
 
+.grey-box .article-subtitle {
+  margin-top: 0;
+}
+
 .article-page {
   background-color: var(--color-light);
   color: var(--color-primary);
