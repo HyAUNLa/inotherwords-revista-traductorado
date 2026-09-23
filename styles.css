@@ -275,7 +275,7 @@ main > div {
 
 main div h2 {
   font-family: "Playfair Display", serif;
-  font-size: 60px;
+  font-size: 3.5rem;
   color: var(--color-primary);
 }
 
@@ -286,7 +286,7 @@ main div h5 {
 
 main h4 {
   font-family: "Playfair Display", serif;
-  font-size: 36px;
+  font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: 24px;
 }
@@ -882,6 +882,16 @@ td {
 }
 
 @media (max-width: 1024px) {
+  main {
+    padding: 100px 0;
+  }
+  body {
+    background: var(--color-light);
+  }
+  main > div {
+    width: 100%;
+    padding: 2rem;
+  }
   nav > div:first-child,
   nav > div:last-child {
     padding: 0.5rem 1rem;
@@ -905,7 +915,7 @@ td {
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--color-light);
+    background: #ebefea;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 1.5rem;
@@ -919,6 +929,7 @@ td {
   }
   .home {
     flex-direction: column;
+    background: var(--color-primary);
   }
   .home .title {
     width: 100%;
@@ -926,9 +937,52 @@ td {
   .home-description {
     padding: 2rem;
   }
+  .scroll-progress {
+    top: 103px;
+  }
+}
+
+@media (max-width: 900px) {
+  .lateral-menu-container {
+    display: none;
+  }
+  .article-page {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
+  .article-title {
+    font-size: 1.5rem;
+  }
+  .article-author {
+    font-size: 1rem;
+  }
+  .article-container {
+    padding: 0;
+  }
+  .team-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .in-memoriam div {
+    flex-direction: column;
+  }
+  .article-preview {
+    width: 100%;
+  }
+  main > div {
+    padding: 1rem;
+  }
+  .iow-info {
+    flex-direction: column;
+  }
+  main div h2 {
+    font-size: 2.5rem;
+  }
+  .content h5 {
+    font-size: 1.5rem;
+  }
   .home-description {
     padding: 1rem;
   }
@@ -949,13 +1003,7 @@ td {
     font-size: small;
   }
   .article-page {
-    padding: 22px 12px;
-  }
-  .article-card {
-    padding: 30px 20px;
-  }
-  .article-index {
-    padding: 18px;
+    padding: 100px 1rem 3rem 1rem;
   }
   .article-actions {
     justify-content: stretch;
@@ -1009,6 +1057,7 @@ td {
   }
   .article-container {
     margin: 0;
+    padding: 0;
   }
   .article-page {
     padding: 0;
