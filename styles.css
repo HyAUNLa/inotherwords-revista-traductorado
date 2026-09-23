@@ -684,8 +684,9 @@ td {
 }
 
 .article-page {
+  background-color: var(--color-light);
   color: var(--color-primary);
-  padding: 200px 0 100px 0;
+  padding: 100px 0 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -812,6 +813,7 @@ td {
   padding: 1rem;
   background: var(--color-x-light);
   border-top: 5px solid var(--color-secondary);
+  margin-top: 5rem;
 }
 
 .bio-box h2 {
@@ -882,14 +884,15 @@ td {
   left: 0;
   width: 0;
   height: 4px;
-  background: var(--color-dark);
+  background: var(--color-primary);
   z-index: 9999;
 }
 
 .lateral-menu-container {
   background: var(--color-primary-light);
   height: 200px 0;
-  width: 300px;
+  min-width: 250px;
+  width: 20%;
   position: sticky;
   top: 143px;
   height: 100vh;
@@ -926,6 +929,20 @@ td {
 
 .lateral-menu-container .current:hover {
   color: var(--color-primary);
+}
+
+.lateral-menu-container .article-button {
+  margin: 5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-xx-dark);
+  font-size: smaller;
+  font-weight: 400;
+}
+
+.lateral-menu-container .article-button:hover {
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
 }
 
 @media (max-width: 640px) {
