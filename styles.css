@@ -1025,25 +1025,20 @@ td {
     margin: 20mm 0;
     @bottom-right {
       content: counter(page);
-      margin-right: 5%;
+      margin-right: 20mm;
       font-family: var(--font-reading);
       font-size: 9pt;
     }
     @bottom-left {
       content: "En Otras Palabras /In Other Words";
-      margin-left: 5%;
+      margin-left: 20mm;
       font-family: var(--font-reading);
       font-size: 9pt;
     }
   }
   body {
     background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .article-page {
-    width: unset;
+    padding: 30mm 20mm;
   }
   .lang-selector,
   nav,
@@ -1051,16 +1046,8 @@ td {
   .scroll-progress,
   .footnotes a,
   .lateral-menu-container,
-  .article-actions,
-  .article-card {
+  .article-actions {
     display: none;
-  }
-  .article-container {
-    margin: 0;
-    padding: 0;
-  }
-  .article-page {
-    padding: 0;
   }
   .article-content p {
     font-size: 11pt;
@@ -1070,9 +1057,5 @@ td {
   }
   .reference-list li {
     font-size: 9pt;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
   }
 }
